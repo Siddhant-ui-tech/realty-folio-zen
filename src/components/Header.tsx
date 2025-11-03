@@ -38,7 +38,7 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button className="bg-gradient-gold text-accent-foreground hover:opacity-90 font-semibold">
+            <Button variant="premium" className="font-semibold">
               List Property
             </Button>
           </div>
@@ -71,7 +71,7 @@ const Header = () => {
               <a href="#contact" className="text-foreground hover:text-primary transition-colors py-2">
                 Contact
               </a>
-              <Button className="bg-gradient-gold text-accent-foreground hover:opacity-90 font-semibold w-full">
+              <Button variant="premium" className="font-semibold w-full">
                 List Property
               </Button>
             </div>

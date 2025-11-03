@@ -75,7 +75,7 @@ const PropertyCard = ({
             <div className="text-sm text-muted-foreground">Starting from</div>
             <div className="text-2xl font-bold text-accent">{price}</div>
           </div>
-          <Button className="bg-gradient-primary text-primary-foreground hover:opacity-90">
+          <Button variant="default">
             View Details
           </Button>
         </div>

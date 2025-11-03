@@ -46,7 +46,7 @@ const ContactSection = () => {
                 placeholder="Your Message"
                 className="bg-secondary border-border min-h-32"
               />
-              <Button className="w-full bg-gradient-primary text-primary-foreground hover:opacity-90 h-12 font-semibold">
+              <Button variant="premium" className="w-full h-12 font-semibold">
                 Submit Inquiry
               </Button>
             </form>
