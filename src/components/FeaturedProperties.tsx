@@ -1,4 +1,5 @@
 import PropertyCard from "./PropertyCard";
+import { Link } from "react-router-dom";
 import villaImage from "@/assets/property-villa.jpg";
 import apartmentImage from "@/assets/property-apartment.jpg";
 import penthouseImage from "@/assets/property-penthouse.jpg";
@@ -6,6 +7,7 @@ import penthouseImage from "@/assets/property-penthouse.jpg";
 const FeaturedProperties = () => {
   const properties = [
     {
+      id: "1",
       image: villaImage,
       title: "Luxury Villa with Pool",
       location: "Whitefield, Bangalore",
@@ -17,6 +19,7 @@ const FeaturedProperties = () => {
       badge: "RERA Verified",
     },
     {
+      id: "2",
       image: apartmentImage,
       title: "Premium Sky Residences",
       location: "Bandra West, Mumbai",
@@ -28,6 +31,7 @@ const FeaturedProperties = () => {
       badge: "New Launch",
     },
     {
+      id: "3",
       image: penthouseImage,
       title: "Penthouse with Terrace",
       location: "Koregaon Park, Pune",
@@ -53,19 +57,19 @@ const FeaturedProperties = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animate-slide-up">
-          {properties.map((property, index) => (
-            <PropertyCard key={index} {...property} />
+          {properties.map((property) => (
+            <PropertyCard key={property.id} {...property} />
           ))}
         </div>
 
         <div className="text-center mt-12">
-          <a
-            href="#all-properties"
+          <Link
+            to="/properties"
             className="inline-flex items-center text-primary hover:text-primary/80 font-semibold text-lg transition-colors"
           >
             View All Properties
             <span className="ml-2">→</span>
-          </a>
+          </Link>
         </div>
       </div>
     </section>

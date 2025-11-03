@@ -1,7 +1,9 @@
 import { MapPin, Maximize, Bed, Bath, BadgeCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 interface PropertyCardProps {
+  id?: string;
   image: string;
   title: string;
   location: string;
@@ -14,6 +16,7 @@ interface PropertyCardProps {
 }
 
 const PropertyCard = ({
+  id = "1",
   image,
   title,
   location,
@@ -75,9 +78,11 @@ const PropertyCard = ({
             <div className="text-sm text-muted-foreground">Starting from</div>
             <div className="text-2xl font-bold text-accent">{price}</div>
           </div>
-          <Button variant="default">
-            View Details
-          </Button>
+          <Link to={`/property/${id}`}>
+            <Button variant="default">
+              View Details
+            </Button>
+          </Link>
         </div>
       </div>
     </div>

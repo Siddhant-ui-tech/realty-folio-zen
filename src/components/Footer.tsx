@@ -1,4 +1,5 @@
 import { Building2, Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -7,12 +8,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
+            <Link to="/" className="flex items-center gap-2 mb-4">
               <Building2 className="w-8 h-8 text-primary" />
               <span className="font-playfair text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
                 LuxeSpaces
               </span>
-            </div>
+            </Link>
             <p className="text-muted-foreground mb-4">
               Find your space. Feel your future. India's premier destination for luxury real estate.
             </p>
@@ -37,29 +38,29 @@ const Footer = () => {
             <h3 className="font-playfair text-lg font-bold mb-4 text-foreground">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/" className="text-muted-foreground hover:text-primary transition-colors">
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#properties" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/properties" className="text-muted-foreground hover:text-primary transition-colors">
                   Properties
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#locations" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/locations" className="text-muted-foreground hover:text-primary transition-colors">
                   Locations
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#about" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/about" className="text-muted-foreground hover:text-primary transition-colors">
                   About Us
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#contact" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -69,29 +70,29 @@ const Footer = () => {
             <h3 className="font-playfair text-lg font-bold mb-4 text-foreground">Property Types</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/properties" className="text-muted-foreground hover:text-primary transition-colors">
                   Luxury Villas
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/properties" className="text-muted-foreground hover:text-primary transition-colors">
                   Premium Apartments
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/properties" className="text-muted-foreground hover:text-primary transition-colors">
                   Penthouses
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/properties" className="text-muted-foreground hover:text-primary transition-colors">
                   Plots & Land
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/properties" className="text-muted-foreground hover:text-primary transition-colors">
                   Commercial Spaces
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
