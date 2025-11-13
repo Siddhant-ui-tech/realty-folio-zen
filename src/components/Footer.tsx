@@ -126,7 +126,7 @@ const Footer = () => {
         <div className="border-t border-border pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-muted-foreground text-center md:text-left">
-              © 2024 Shashi Realty. All rights reserved.
+              © 2024 Shashi Realty. All Rights Reserved.
             </p>
             <p className="text-muted-foreground text-center md:text-right">
               Made with ❤️ in India
