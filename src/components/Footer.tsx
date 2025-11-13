@@ -1,5 +1,6 @@
-import { Building2, Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 import { Link } from "react-router-dom";
+import shashiRealtyLogo from "@/assets/shashi-realty-logo.png";
 
 const Footer = () => {
   return (
@@ -9,10 +10,7 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <Link to="/" className="flex items-center gap-2 mb-4">
-              <Building2 className="w-8 h-8 text-primary" />
-              <span className="font-playfair text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-                LuxeSpaces
-              </span>
+              <img src={shashiRealtyLogo} alt="Shashi Realty" className="h-12" />
             </Link>
             <p className="text-muted-foreground mb-4">
               Find your space. Feel your future. India's premier destination for luxury real estate.
@@ -128,7 +126,7 @@ const Footer = () => {
         <div className="border-t border-border pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-muted-foreground text-center md:text-left">
-              © 2024 LuxeSpaces. All rights reserved.
+              © 2024 Shashi Realty. All rights reserved.
             </p>
             <p className="text-muted-foreground text-center md:text-right">
               Made with ❤️ in India

@@ -8,22 +8,10 @@ import { Mail, Phone, MapPin, Clock, MessageCircle } from "lucide-react";
 const Contact = () => {
   const offices = [
     {
-      city: "Mumbai",
-      address: "123 Business Plaza, BKC, Mumbai - 400051",
-      phone: "+91 22 1234 5678",
-      email: "mumbai@luxespaces.in",
-    },
-    {
-      city: "Bangalore",
-      address: "456 Tech Park, Whitefield, Bangalore - 560066",
-      phone: "+91 80 8765 4321",
-      email: "bangalore@luxespaces.in",
-    },
-    {
-      city: "Pune",
-      address: "789 Corporate Hub, Hinjewadi, Pune - 411057",
-      phone: "+91 20 9876 5432",
-      email: "pune@luxespaces.in",
+      city: "Surat",
+      address: "Bhestan, Surat, Gujarat",
+      phone: "+91 261 1234 5678",
+      email: "info@shashirealty.in",
     },
   ];
 
@@ -124,8 +112,8 @@ const Contact = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-foreground mb-1">Email Us</h4>
-                      <p className="text-muted-foreground">info@luxespaces.in</p>
-                      <p className="text-muted-foreground">support@luxespaces.in</p>
+                      <p className="text-muted-foreground">info@shashirealty.in</p>
+                      <p className="text-muted-foreground">support@shashirealty.in</p>
                     </div>
                   </div>
 

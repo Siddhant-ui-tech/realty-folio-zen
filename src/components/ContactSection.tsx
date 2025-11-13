@@ -78,8 +78,8 @@ const ContactSection = () => {
                   <h4 className="font-playfair text-xl font-bold mb-2 text-foreground">
                     Email Us
                   </h4>
-                  <p className="text-muted-foreground">info@luxespaces.in</p>
-                  <p className="text-muted-foreground">support@luxespaces.in</p>
+                  <p className="text-muted-foreground">info@shashirealty.in</p>
+                  <p className="text-muted-foreground">support@shashirealty.in</p>
                 </div>
               </div>
             </div>

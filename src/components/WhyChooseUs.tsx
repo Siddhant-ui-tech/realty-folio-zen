@@ -29,7 +29,7 @@ const WhyChooseUs = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="font-playfair text-4xl md:text-5xl font-bold mb-4 text-foreground">
-            Why Choose <span className="text-primary">LuxeSpaces</span>
+            Why Choose <span className="text-primary">Shashi Realty</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Your trusted partner in finding the perfect luxury home

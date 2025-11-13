@@ -1,60 +1,95 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Shield, Building, Award, Clock, Users, Target } from "lucide-react";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
 
 const About = () => {
-  const values = [
+  const completedProjects = [
     {
-      icon: Shield,
-      title: "Integrity",
-      description: "Complete transparency in all our dealings with clients and partners",
+      name: "SHASHIROOP HOMES",
+      type: "Residential Low Rise",
+      units: "241 Flats, 42 Shops",
+      completion: "May 2014",
     },
     {
-      icon: Award,
-      title: "Excellence",
-      description: "Commitment to delivering only the finest properties and services",
+      name: "KRISHNA VILLA",
+      type: "Row House Plots",
+      units: "70",
+      completion: "Apr 2015",
     },
     {
-      icon: Users,
-      title: "Client-First",
-      description: "Your dreams and satisfaction are at the heart of everything we do",
+      name: "VIJYALAXMI RESIDENCY",
+      type: "Residential Low Rise",
+      units: "38",
+      completion: "May 2018",
     },
     {
-      icon: Target,
-      title: "Innovation",
-      description: "Leveraging technology to make property search seamless",
+      name: "BHAGYALAXMI RESIDENCY",
+      type: "Residential Low Rise",
+      units: "394 Flats, 12 Shops",
+      completion: "Dec 2018",
+    },
+    {
+      name: "VAIBHAVLAXMI SHOPPING",
+      type: "Commercial",
+      units: "247",
+      completion: "Sep 2022",
+    },
+    {
+      name: "BM VILLA",
+      type: "Row House",
+      units: "92",
+      completion: "Jul 2023",
+    },
+    {
+      name: "SHASHIKUNJ",
+      type: "Row House",
+      units: "64",
+      completion: "Sep 2025",
+    },
+  ];
+
+  const ongoingProjects = [
+    {
+      name: "SHASHIDHWAR",
+      type: "Residential Low Rise",
+      units: "196 Flats, 26 Shops",
+      status: "On Going",
+    },
+    {
+      name: "BM AVENUE",
+      type: "Commercial & Residential Low Rise",
+      units: "135 Shops, 336 Flats",
+      status: "On Going",
     },
   ];
 
   const stats = [
-    { number: "15+", label: "Years of Excellence" },
-    { number: "500+", label: "Properties Listed" },
-    { number: "50+", label: "Trusted Builders" },
-    { number: "10,000+", label: "Happy Clients" },
-  ];
-
-  const team = [
-    { name: "Rajesh Kumar", role: "Founder & CEO", experience: "20 years in real estate" },
-    { name: "Priya Sharma", role: "Head of Operations", experience: "15 years experience" },
-    { name: "Amit Patel", role: "Chief Technology Officer", experience: "12 years in PropTech" },
-    { name: "Sneha Reddy", role: "Head of Customer Success", experience: "10 years experience" },
+    { number: "860+", label: "Flats Delivered" },
+    { number: "325+", label: "Shops Built" },
+    { number: "220+", label: "Row Houses/Plots" },
+    { number: "10+", label: "Years of Excellence" },
   ];
 
   return (
     <div className="min-h-screen font-inter bg-background">
       <Header />
-      
+
       {/* Hero Section */}
       <section className="pt-32 pb-16 bg-secondary/30">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center animate-fade-in">
             <h1 className="font-playfair text-5xl md:text-6xl font-bold mb-6 text-foreground">
-              About <span className="text-primary">LuxeSpaces</span>
+              About <span className="text-primary">Shashi Realty</span>
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              India's most trusted platform for discovering and investing in premium real estate.
-              We connect discerning buyers with their dream properties through verified listings
-              and unparalleled service.
+              Shashi Realty, a promising real estate group based in Bhestan, Surat, has been blending affordability with modern architecture for over a decade. The group has extensive experience in developing residential, commercial, and row house projects, delivering quality homes and spaces that inspire trust and satisfaction.
             </p>
           </div>
         </div>
@@ -76,126 +111,87 @@ const About = () => {
         </div>
       </section>
 
-      {/* Mission Section */}
+      {/* Completed Projects Section */}
       <section className="py-16 bg-secondary/30">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="font-playfair text-4xl font-bold mb-8 text-center text-foreground">
-              Our <span className="text-primary">Mission</span>
-            </h2>
-            <div className="bg-card rounded-2xl p-8 md:p-12 border border-border shadow-card">
-              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                At LuxeSpaces, we believe that finding your dream home should be an exciting,
-                transparent, and seamless experience. Our mission is to revolutionize the real
-                estate industry in India by providing a platform that brings together the finest
-                properties, trusted builders, and verified information - all in one place.
-              </p>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                We are committed to maintaining the highest standards of integrity, ensuring every
-                property on our platform is RERA verified, and providing our clients with expert
-                guidance throughout their property buying journey.
-              </p>
+          <h2 className="font-playfair text-4xl font-bold mb-8 text-center text-foreground">
+            Completed <span className="text-primary">Projects</span>
+          </h2>
+          <div className="max-w-6xl mx-auto bg-card rounded-2xl border border-border shadow-card overflow-hidden">
+            <div className="overflow-x-auto">
+              <Table>
+                <TableHeader>
+                  <TableRow>
+                    <TableHead className="font-bold">Project Name</TableHead>
+                    <TableHead className="font-bold">Type</TableHead>
+                    <TableHead className="font-bold">Total Units</TableHead>
+                    <TableHead className="font-bold">Year of Completion</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  {completedProjects.map((project, index) => (
+                    <TableRow key={index}>
+                      <TableCell className="font-semibold">{project.name}</TableCell>
+                      <TableCell>{project.type}</TableCell>
+                      <TableCell>{project.units}</TableCell>
+                      <TableCell>{project.completion}</TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Values Section */}
+      {/* Ongoing Projects Section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="font-playfair text-4xl font-bold mb-12 text-center text-foreground">
-            Our <span className="text-primary">Values</span>
+          <h2 className="font-playfair text-4xl font-bold mb-8 text-center text-foreground">
+            Ongoing <span className="text-primary">Projects</span>
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => {
-              const Icon = value.icon;
-              return (
-                <div
-                  key={index}
-                  className="bg-card rounded-2xl p-6 border border-border hover:border-primary transition-all duration-300 hover:-translate-y-2 hover:shadow-luxury text-center"
-                >
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-2xl mb-6">
-                    <Icon className="w-8 h-8 text-primary" />
-                  </div>
-                  <h3 className="font-playfair text-xl font-bold mb-3 text-foreground">
-                    {value.title}
-                  </h3>
-                  <p className="text-muted-foreground">{value.description}</p>
-                </div>
-              );
-            })}
+          <div className="max-w-6xl mx-auto bg-card rounded-2xl border border-border shadow-card overflow-hidden">
+            <div className="overflow-x-auto">
+              <Table>
+                <TableHeader>
+                  <TableRow>
+                    <TableHead className="font-bold">Project Name</TableHead>
+                    <TableHead className="font-bold">Type</TableHead>
+                    <TableHead className="font-bold">Total Units</TableHead>
+                    <TableHead className="font-bold">Status</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  {ongoingProjects.map((project, index) => (
+                    <TableRow key={index}>
+                      <TableCell className="font-semibold">{project.name}</TableCell>
+                      <TableCell>{project.type}</TableCell>
+                      <TableCell>{project.units}</TableCell>
+                      <TableCell>
+                        <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-primary/10 text-primary">
+                          {project.status}
+                        </span>
+                      </TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Team Section */}
+      {/* Experience & Commitment Section */}
       <section className="py-16 bg-secondary/30">
         <div className="container mx-auto px-4">
-          <h2 className="font-playfair text-4xl font-bold mb-12 text-center text-foreground">
-            Meet Our <span className="text-primary">Leadership</span>
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-            {team.map((member, index) => (
-              <div
-                key={index}
-                className="bg-card rounded-2xl p-6 border border-border hover:border-primary transition-all duration-300 hover:-translate-y-2 hover:shadow-luxury text-center"
-              >
-                <div className="w-20 h-20 bg-gradient-primary rounded-full mx-auto mb-4"></div>
-                <h3 className="font-playfair text-xl font-bold mb-1 text-foreground">
-                  {member.name}
-                </h3>
-                <div className="text-primary font-semibold mb-2">{member.role}</div>
-                <p className="text-sm text-muted-foreground">{member.experience}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="font-playfair text-4xl font-bold mb-8 text-foreground">
-              Why Choose <span className="text-primary">LuxeSpaces?</span>
+          <div className="max-w-4xl mx-auto">
+            <h2 className="font-playfair text-4xl font-bold mb-8 text-center text-foreground">
+              Experience & <span className="text-primary">Commitment</span>
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-card rounded-2xl p-8 border border-border text-left">
-                <Building className="w-10 h-10 text-primary mb-4" />
-                <h3 className="font-playfair text-xl font-bold mb-3 text-foreground">
-                  Premium Selection
-                </h3>
-                <p className="text-muted-foreground">
-                  Handpicked properties from India's most trusted builders and developers
-                </p>
-              </div>
-              <div className="bg-card rounded-2xl p-8 border border-border text-left">
-                <Shield className="w-10 h-10 text-primary mb-4" />
-                <h3 className="font-playfair text-xl font-bold mb-3 text-foreground">
-                  100% Verified
-                </h3>
-                <p className="text-muted-foreground">
-                  Every property is RERA verified and legally compliant
-                </p>
-              </div>
-              <div className="bg-card rounded-2xl p-8 border border-border text-left">
-                <Clock className="w-10 h-10 text-primary mb-4" />
-                <h3 className="font-playfair text-xl font-bold mb-3 text-foreground">
-                  24/7 Support
-                </h3>
-                <p className="text-muted-foreground">
-                  Expert assistance available whenever you need guidance
-                </p>
-              </div>
-              <div className="bg-card rounded-2xl p-8 border border-border text-left">
-                <Award className="w-10 h-10 text-primary mb-4" />
-                <h3 className="font-playfair text-xl font-bold mb-3 text-foreground">
-                  Industry Leaders
-                </h3>
-                <p className="text-muted-foreground">
-                  Over 15 years of excellence in luxury real estate
-                </p>
-              </div>
+            <div className="bg-card rounded-2xl p-8 md:p-12 border border-border shadow-card">
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                The group has successfully built more than 860 flats, 325 shops, and 220 row houses/plots. Shashi Realty is committed to delivering high-quality, affordable homes with a comprehensive range of amenities, ensuring every project becomes a space people are proud to call home.
+              </p>
             </div>
           </div>
         </div>

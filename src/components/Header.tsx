@@ -1,7 +1,8 @@
-import { Building2, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
+import shashiRealtyLogo from "@/assets/shashi-realty-logo.png";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -14,10 +15,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
-            <Building2 className="w-8 h-8 text-primary" />
-            <span className="font-playfair text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-              LuxeSpaces
-            </span>
+            <img src={shashiRealtyLogo} alt="Shashi Realty" className="h-12" />
           </Link>
 
           {/* Desktop Navigation */}
