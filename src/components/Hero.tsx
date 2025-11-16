@@ -27,43 +27,6 @@ const Hero = () => {
             Discover luxury living with RERA verified properties from trusted builders
           </p>
 
-          {/* Search Box */}
-          <div className="bg-card/90 backdrop-blur-lg rounded-2xl p-6 md:p-8 shadow-luxury border border-border animate-slide-up">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
-              {/* Location */}
-              <div className="relative">
-                <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
-                <Input
-                  placeholder="Mumbai, Pune, Bangalore..."
-                  className="pl-10 bg-secondary border-border h-12"
-                />
-              </div>
-
-              {/* Property Type */}
-              <div className="relative">
-                <Home className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
-                <Input
-                  placeholder="Villa, Apartment, Plot..."
-                  className="pl-10 bg-secondary border-border h-12"
-                />
-              </div>
-
-              {/* Budget */}
-              <div className="relative">
-                <IndianRupee className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
-                <Input
-                  placeholder="Budget Range"
-                  className="pl-10 bg-secondary border-border h-12"
-                />
-              </div>
-            </div>
-
-            <Button variant="premium" className="w-full md:w-auto h-12 px-8 font-semibold">
-              <Search className="w-5 h-5 mr-2" />
-              Search Properties
-            </Button>
-          </div>
-
           {/* Stats */}
           <div className="grid grid-cols-3 gap-8 mt-16 animate-scale-in">
             <div>

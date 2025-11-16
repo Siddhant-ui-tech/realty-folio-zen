@@ -7,40 +7,40 @@ import penthouseImage from "@/assets/property-penthouse.jpg";
 const FeaturedProperties = () => {
   const properties = [
     {
-      id: "1",
+      id: "bhagyalaxmi-residency",
       image: villaImage,
-      title: "Luxury Villa with Pool",
-      location: "Whitefield, Bangalore",
-      price: "₹4.5 Cr",
-      size: "4500 sq.ft",
-      bedrooms: 4,
-      bathrooms: 5,
-      type: "Villa",
-      badge: "RERA Verified",
+      title: "Bhagyalaxmi Residency",
+      location: "Bhestan, Surat",
+      size: "Ready to Move",
+      bedrooms: 2,
+      bathrooms: 2,
+      type: "Residential",
+      badge: "Ready to Move",
+      description: "Bhagyalaxmi Residency in Bhestan, Surat is a ready-to-move housing society offering a perfect blend of comfort, space, and modern living.",
     },
     {
-      id: "2",
+      id: "shashikunj",
       image: apartmentImage,
-      title: "Premium Sky Residences",
-      location: "Bandra West, Mumbai",
-      price: "₹3.2 Cr",
-      size: "2800 sq.ft",
-      bedrooms: 3,
-      bathrooms: 4,
-      type: "Apartment",
-      badge: "New Launch",
+      title: "Shashikunj",
+      location: "Udhna Zone, Surat",
+      size: "459-1949 sq.ft",
+      bedrooms: 0,
+      bathrooms: 0,
+      type: "Plots",
+      badge: "RERA Approved",
+      description: "Shashikunj offers premium residential plots in Udhna Zone, Surat with plot sizes ranging from 459–1949 sq.ft.",
     },
     {
-      id: "3",
+      id: "vaibhavlaxmi-shopping",
       image: penthouseImage,
-      title: "Penthouse with Terrace",
-      location: "Koregaon Park, Pune",
-      price: "₹6.8 Cr",
-      size: "5200 sq.ft",
-      bedrooms: 5,
-      bathrooms: 6,
-      type: "Penthouse",
-      badge: "Luxury",
+      title: "Vaibhavlaxmi Shopping Mall",
+      location: "Bhestan, Surat",
+      size: "Commercial Hub",
+      bedrooms: 0,
+      bathrooms: 0,
+      type: "Commercial",
+      badge: "Premium",
+      description: "A premium commercial hub in Bhestan with shops, offices, and high visibility for business growth.",
     },
   ];
 
@@ -52,7 +52,7 @@ const FeaturedProperties = () => {
             Featured <span className="text-primary">Properties</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Handpicked luxury homes from India's most prestigious locations
+            Handpicked properties from Surat's most prestigious locations
           </p>
         </div>
 

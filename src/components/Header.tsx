@@ -33,10 +33,10 @@ const Header = () => {
               Properties
             </Link>
             <Link 
-              to="/locations" 
-              className={`transition-colors ${isActive('/locations') ? 'text-primary' : 'text-foreground hover:text-primary'}`}
+              to="/ongoing-projects" 
+              className={`transition-colors ${isActive('/ongoing-projects') ? 'text-primary' : 'text-foreground hover:text-primary'}`}
             >
-              Locations
+              Ongoing Projects
             </Link>
             <Link 
               to="/about" 
@@ -51,13 +51,6 @@ const Header = () => {
               Contact
             </Link>
           </nav>
-
-          {/* CTA Button */}
-          <div className="hidden md:block">
-            <Button variant="premium" className="font-semibold">
-              List Property
-            </Button>
-          </div>
 
           {/* Mobile Menu Button */}
           <button
@@ -87,11 +80,11 @@ const Header = () => {
                 Properties
               </Link>
               <Link 
-                to="/locations" 
-                className={`py-2 transition-colors ${isActive('/locations') ? 'text-primary' : 'text-foreground hover:text-primary'}`}
+                to="/ongoing-projects" 
+                className={`py-2 transition-colors ${isActive('/ongoing-projects') ? 'text-primary' : 'text-foreground hover:text-primary'}`}
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Locations
+                Ongoing Projects
               </Link>
               <Link 
                 to="/about" 
@@ -107,9 +100,6 @@ const Header = () => {
               >
                 Contact
               </Link>
-              <Button variant="premium" className="font-semibold w-full">
-                List Property
-              </Button>
             </div>
           </nav>
         )}

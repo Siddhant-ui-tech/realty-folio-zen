@@ -7,12 +7,13 @@ interface PropertyCardProps {
   image: string;
   title: string;
   location: string;
-  price: string;
+  price?: string;
   size: string;
   bedrooms: number;
   bathrooms: number;
   type: string;
   badge?: string;
+  description?: string;
 }
 
 const PropertyCard = ({
@@ -73,11 +74,7 @@ const PropertyCard = ({
           </div>
         </div>
 
-        <div className="flex items-center justify-between">
-          <div>
-            <div className="text-sm text-muted-foreground">Starting from</div>
-            <div className="text-2xl font-bold text-accent">{price}</div>
-          </div>
+        <div className="flex items-center justify-end">
           <Link to={`/property/${id}`}>
             <Button variant="default">
               View Details

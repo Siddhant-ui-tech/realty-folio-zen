@@ -10,31 +10,155 @@ import penthouseImage from "@/assets/property-penthouse.jpg";
 const PropertyDetail = () => {
   const { id } = useParams();
 
-  // Mock property data - in real app, fetch based on id
-  const property = {
-    images: [villaImage, apartmentImage, penthouseImage],
-    title: "Luxury Villa with Pool",
-    location: "Whitefield, Bangalore",
-    price: "₹4.5 Cr",
-    size: "4500 sq.ft",
-    bedrooms: 4,
-    bathrooms: 5,
-    type: "Villa",
-    reraId: "PRM/KA/RERA/1251/309/PR/171123/001234",
-    possession: "Ready to Move",
-    builder: "Prestige Group",
-    description: "Experience luxury living at its finest in this stunning villa featuring contemporary design, premium finishes, and world-class amenities. Located in the heart of Whitefield, this property offers the perfect blend of tranquility and connectivity.",
-    amenities: [
-      "Private Swimming Pool",
-      "Landscaped Garden",
-      "Premium Gym",
-      "Clubhouse",
-      "24/7 Security",
-      "Power Backup",
-      "Covered Parking",
-      "Children's Play Area",
-    ],
+  // Property data based on ID
+  const propertyData: Record<string, any> = {
+    "bhagyalaxmi-residency": {
+      images: [villaImage, apartmentImage, penthouseImage],
+      title: "Bhagyalaxmi Residency",
+      location: "Bhestan, Surat",
+      price: "",
+      size: "0.16 acres",
+      bedrooms: 2,
+      bathrooms: 2,
+      type: "Residential Low Rise",
+      reraId: "RERA Verified",
+      possession: "Ready to Move",
+      builder: "Shashi Realty",
+      description: "Bhagyalaxmi Residency in Bhestan, Surat is a ready-to-move housing society designed to offer a perfect combination of comfort and style. Spread across 0.16 acres, it is one of the spacious communities in the region. With essential amenities and strong infrastructure, Bhestan is emerging as a prime choice for homebuyers. Surat's growing job market and robust development make Bhagyalaxmi Residency ideal for both residential and investment purposes.",
+      amenities: [
+        "Ready to Move",
+        "394 Flats, 12 Shops",
+        "Spacious Layout",
+        "Modern Architecture",
+        "Essential Amenities",
+        "Strong Infrastructure",
+        "Prime Location",
+        "Investment Opportunity",
+      ],
+    },
+    "shashikunj": {
+      images: [apartmentImage, villaImage, penthouseImage],
+      title: "Shashikunj",
+      location: "Udhna Zone, Surat",
+      price: "",
+      size: "459-1949 sq.ft",
+      bedrooms: 0,
+      bathrooms: 0,
+      type: "Residential Plots",
+      reraId: "PR/GJ/SURAT/CHORASI/SUDA/PAA11214/280223",
+      possession: "Launched Feb 2023",
+      builder: "Shashi Realty",
+      description: "Shashikunj is a premium residential plot project in Udhna Zone, Surat offering plots ranging from 459 sq.ft. to 1949 sq.ft. Launched in February 2023, it includes 64 units and is designed as a gated community with amenities like Landscaping, Tree Planting, and Storm Water Drains. It is RERA approved (RERA ID: PR/GJ/SURAT/CHORASI/SUDA/PAA11214/280223). The locality offers excellent connectivity to malls, hospitals, schools, and main city routes.",
+      amenities: [
+        "64 Premium Plots",
+        "Gated Community",
+        "Landscaping",
+        "Tree Planting",
+        "Storm Water Drains",
+        "RERA Approved",
+        "Excellent Connectivity",
+        "Near Malls & Hospitals",
+      ],
+    },
+    "vaibhavlaxmi-shopping": {
+      images: [penthouseImage, apartmentImage, villaImage],
+      title: "Vaibhavlaxmi Shopping Mall",
+      location: "Bhestan, Surat",
+      price: "",
+      size: "247 Units",
+      bedrooms: 0,
+      bathrooms: 0,
+      type: "Commercial",
+      reraId: "Commercial Project",
+      possession: "Completed Sep 2022",
+      builder: "Shashi Realty",
+      description: "Vaibhavlaxmi Shopping Mall is a premium commercial project in Bhestan, Surat offering commercial shops and office spaces designed for maximum visibility and high footfall. With strong infrastructure, improving connectivity, and modern amenities, it is an ideal investment opportunity. The project supports diverse commercial activities and is expected to generate long-term returns.",
+      amenities: [
+        "247 Commercial Units",
+        "High Visibility Location",
+        "Maximum Footfall",
+        "Modern Infrastructure",
+        "Office Spaces",
+        "Retail Shops",
+        "Investment Opportunity",
+        "Long-term Returns",
+      ],
+    },
+    "vijya-laxmi-residency": {
+      images: [villaImage, penthouseImage, apartmentImage],
+      title: "Vijya Laxmi Residency",
+      location: "Bhestan, Surat",
+      price: "",
+      size: "2 BHK",
+      bedrooms: 2,
+      bathrooms: 2,
+      type: "Luxury Apartments",
+      reraId: "RERA Verified",
+      possession: "Ready",
+      builder: "Shashi Realty",
+      description: "Vijya Laxmi Residency in Bhestan, Surat provides luxurious 2 BHK apartments designed for an elite lifestyle. With world-class amenities such as 24/7 water supply, backup electricity, covered parking, fire safety, and lifts, the project ensures modern living at its finest. The apartments are Vastu compliant and offer excellent space utilization. Located close to Surat International Airport, this project provides a premium and well-connected address.",
+      amenities: [
+        "2 BHK Apartments",
+        "24/7 Water Supply",
+        "Backup Electricity",
+        "Covered Parking",
+        "Fire Safety",
+        "Lift Facility",
+        "Vastu Compliant",
+        "Near Airport",
+      ],
+    },
+    "bm-avenue": {
+      images: [apartmentImage, villaImage, penthouseImage],
+      title: "BM Avenue",
+      location: "Bhestan, Surat",
+      price: "",
+      size: "336 Flats, 135 Shops",
+      bedrooms: 0,
+      bathrooms: 0,
+      type: "Mixed-Use Development",
+      reraId: "Under Construction",
+      possession: "Ongoing",
+      builder: "Shashi Realty",
+      description: "BM Avenue is a modern mixed-use project in Bhestan, Surat featuring retail spaces, corporate offices, and premium commercial units. The project includes 336 elite families and 135 shops/office spaces across 07 storeys. Designed to offer sophisticated living and working environments, BM Avenue is rising as a landmark destination.",
+      amenities: [
+        "336 Residential Units",
+        "135 Commercial Units",
+        "7 Storeys",
+        "Retail Spaces",
+        "Corporate Offices",
+        "Premium Location",
+        "Mixed-Use Development",
+        "Landmark Project",
+      ],
+    },
+    "shashidhwar": {
+      images: [villaImage, apartmentImage, penthouseImage],
+      title: "Shashidhwar",
+      location: "Bhestan, Surat",
+      price: "",
+      size: "196 Units",
+      bedrooms: 0,
+      bathrooms: 0,
+      type: "Residential Project",
+      reraId: "PR/GJ/SURAT/CHORASI/SUDA/MAA07433/080920",
+      possession: "Expected Mar 2026",
+      builder: "Shashidhwar Enterprise",
+      description: "Shashidhwar is a new launch residential project in Bhestan, Surat by Shashidhwar Enterprise with expected delivery by March 2026. RERA Registered (PR/GJ/SURAT/CHORASI/SUDA/MAA07433/080920). Spread across 0.96 acres, it consists of 196 units across 4 towers (7 floors) and offers amenities such as a Park, Senior Citizen Sitout, and Car Parking. It is well connected to Bhestan Railway Station and Udhna Junction, offering excellent accessibility and livability.",
+      amenities: [
+        "196 Units",
+        "4 Towers, 7 Floors",
+        "0.96 Acres",
+        "Park & Gardens",
+        "Senior Citizen Sitout",
+        "Car Parking",
+        "Near Railway Station",
+        "RERA Approved",
+      ],
+    },
   };
+
+  const property = propertyData[id || "bhagyalaxmi-residency"] || propertyData["bhagyalaxmi-residency"];
 
   return (
     <div className="min-h-screen font-inter bg-background">
@@ -58,7 +182,7 @@ const PropertyDetail = () => {
               />
             </div>
             <div className="grid grid-cols-2 gap-4">
-              {property.images.slice(1).map((image, index) => (
+              {property.images.slice(1).map((image: string, index: number) => (
                 <img
                   key={index}
                   src={image}
@@ -84,38 +208,40 @@ const PropertyDetail = () => {
                       <span className="text-lg">{property.location}</span>
                     </div>
                   </div>
-                  <div className="text-right">
-                    <div className="text-sm text-muted-foreground mb-1">Starting from</div>
-                    <div className="text-4xl font-bold text-primary">{property.price}</div>
-                  </div>
                 </div>
 
                 <div className="flex flex-wrap gap-6 pt-6 border-t border-border">
-                  <div className="flex items-center gap-2">
-                    <Bed className="w-5 h-5 text-primary" />
-                    <span className="text-foreground">{property.bedrooms} Bedrooms</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Bath className="w-5 h-5 text-primary" />
-                    <span className="text-foreground">{property.bathrooms} Bathrooms</span>
-                  </div>
+                  {property.bedrooms > 0 && (
+                    <div className="flex items-center gap-2">
+                      <Bed className="w-5 h-5 text-primary" />
+                      <div>
+                        <div className="text-sm text-muted-foreground">Bedrooms</div>
+                        <div className="font-semibold text-foreground">{property.bedrooms}</div>
+                      </div>
+                    </div>
+                  )}
+                  {property.bathrooms > 0 && (
+                    <div className="flex items-center gap-2">
+                      <Bath className="w-5 h-5 text-primary" />
+                      <div>
+                        <div className="text-sm text-muted-foreground">Bathrooms</div>
+                        <div className="font-semibold text-foreground">{property.bathrooms}</div>
+                      </div>
+                    </div>
+                  )}
                   <div className="flex items-center gap-2">
                     <Maximize className="w-5 h-5 text-primary" />
-                    <span className="text-foreground">{property.size}</span>
+                    <div>
+                      <div className="text-sm text-muted-foreground">Size</div>
+                      <div className="font-semibold text-foreground">{property.size}</div>
+                    </div>
                   </div>
                   <div className="flex items-center gap-2">
                     <Calendar className="w-5 h-5 text-primary" />
-                    <span className="text-foreground">{property.possession}</span>
-                  </div>
-                </div>
-
-                <div className="flex gap-4 mt-6">
-                  <div className="bg-primary/10 px-4 py-2 rounded-lg">
-                    <span className="text-sm text-primary font-semibold">{property.type}</span>
-                  </div>
-                  <div className="bg-primary/10 px-4 py-2 rounded-lg flex items-center gap-2">
-                    <Award className="w-4 h-4 text-primary" />
-                    <span className="text-sm text-primary font-semibold">RERA Verified</span>
+                    <div>
+                      <div className="text-sm text-muted-foreground">Possession</div>
+                      <div className="font-semibold text-foreground">{property.possession}</div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -123,7 +249,7 @@ const PropertyDetail = () => {
               {/* Description */}
               <div className="bg-card rounded-2xl p-8 border border-border shadow-card">
                 <h2 className="font-playfair text-2xl font-bold mb-4 text-foreground">
-                  About this Property
+                  Description
                 </h2>
                 <p className="text-muted-foreground leading-relaxed">
                   {property.description}
@@ -136,13 +262,10 @@ const PropertyDetail = () => {
                   Amenities
                 </h2>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                  {property.amenities.map((amenity, index) => (
-                    <div
-                      key={index}
-                      className="flex items-center gap-2 text-foreground"
-                    >
+                  {property.amenities.map((amenity: string, index: number) => (
+                    <div key={index} className="flex items-center gap-2">
                       <div className="w-2 h-2 bg-primary rounded-full"></div>
-                      <span>{amenity}</span>
+                      <span className="text-foreground">{amenity}</span>
                     </div>
                   ))}
                 </div>
@@ -153,22 +276,22 @@ const PropertyDetail = () => {
                 <h2 className="font-playfair text-2xl font-bold mb-6 text-foreground">
                   Property Details
                 </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="flex justify-between py-3 border-b border-border">
-                    <span className="text-muted-foreground">Property Type</span>
-                    <span className="text-foreground font-semibold">{property.type}</span>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <div className="text-sm text-muted-foreground mb-1">Property Type</div>
+                    <div className="font-semibold text-foreground">{property.type}</div>
                   </div>
-                  <div className="flex justify-between py-3 border-b border-border">
-                    <span className="text-muted-foreground">Builder</span>
-                    <span className="text-foreground font-semibold">{property.builder}</span>
+                  <div>
+                    <div className="text-sm text-muted-foreground mb-1">RERA ID</div>
+                    <div className="font-semibold text-foreground">{property.reraId}</div>
                   </div>
-                  <div className="flex justify-between py-3 border-b border-border">
-                    <span className="text-muted-foreground">RERA ID</span>
-                    <span className="text-foreground font-semibold text-sm">{property.reraId}</span>
+                  <div>
+                    <div className="text-sm text-muted-foreground mb-1">Builder</div>
+                    <div className="font-semibold text-foreground">{property.builder}</div>
                   </div>
-                  <div className="flex justify-between py-3 border-b border-border">
-                    <span className="text-muted-foreground">Status</span>
-                    <span className="text-foreground font-semibold">{property.possession}</span>
+                  <div>
+                    <div className="text-sm text-muted-foreground mb-1">Location</div>
+                    <div className="font-semibold text-foreground">{property.location}</div>
                   </div>
                 </div>
               </div>
@@ -178,21 +301,21 @@ const PropertyDetail = () => {
             <div className="lg:col-span-1">
               <div className="sticky top-24 space-y-6">
                 {/* Contact Card */}
-                <div className="bg-card rounded-2xl p-6 border border-border shadow-card animate-scale-in">
+                <div className="bg-card rounded-2xl p-6 border border-border shadow-card">
                   <h3 className="font-playfair text-xl font-bold mb-4 text-foreground">
-                    Interested in this Property?
+                    Contact Us
                   </h3>
                   <div className="space-y-3">
-                    <Button variant="premium" className="w-full h-12 font-semibold">
-                      <Phone className="w-5 h-5 mr-2" />
+                    <Button variant="premium" className="w-full">
+                      <Phone className="w-4 h-4 mr-2" />
                       Call Now
                     </Button>
-                    <Button variant="outline" className="w-full h-12">
-                      <Mail className="w-5 h-5 mr-2" />
+                    <Button variant="outline" className="w-full">
+                      <Mail className="w-4 h-4 mr-2" />
                       Email Us
                     </Button>
-                    <Button variant="outline" className="w-full h-12">
-                      <Download className="w-5 h-5 mr-2" />
+                    <Button variant="secondary" className="w-full">
+                      <Download className="w-4 h-4 mr-2" />
                       Download Brochure
                     </Button>
                   </div>
@@ -200,22 +323,17 @@ const PropertyDetail = () => {
 
                 {/* Builder Info */}
                 <div className="bg-card rounded-2xl p-6 border border-border shadow-card">
-                  <h3 className="font-playfair text-xl font-bold mb-4 text-foreground">
-                    Builder Information
-                  </h3>
-                  <div className="space-y-3">
-                    <div>
-                      <div className="text-sm text-muted-foreground">Name</div>
-                      <div className="text-foreground font-semibold">{property.builder}</div>
-                    </div>
-                    <div>
-                      <div className="text-sm text-muted-foreground">Experience</div>
-                      <div className="text-foreground font-semibold">30+ Years</div>
-                    </div>
-                    <div>
-                      <div className="text-sm text-muted-foreground">Projects Delivered</div>
-                      <div className="text-foreground font-semibold">250+</div>
-                    </div>
+                  <div className="flex items-center gap-2 mb-4">
+                    <Award className="w-6 h-6 text-primary" />
+                    <h3 className="font-playfair text-xl font-bold text-foreground">
+                      Builder
+                    </h3>
+                  </div>
+                  <div>
+                    <div className="font-semibold text-foreground mb-2">{property.builder}</div>
+                    <p className="text-sm text-muted-foreground">
+                      A promising real estate group based in Bhestan, Surat with over a decade of experience.
+                    </p>
                   </div>
                 </div>
               </div>
