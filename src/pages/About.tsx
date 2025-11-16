@@ -190,7 +190,7 @@ const About = () => {
             </h2>
             <div className="bg-card rounded-2xl p-8 md:p-12 border border-border shadow-card">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                The group has successfully built more than 860 flats, 325 shops, and 220 row houses/plots. Shashi Realty is committed to delivering high-quality, affordable homes with a comprehensive range of amenities, ensuring every project becomes a space people are proud to call home.
+                The group has successfully built more than 860 flats, 325 shops, and 220 row houses/plots. Shashi Realty is committed to deliver high-quality, affordable homes with a comprehensive range of amenities, ensuring every project becomes a space where people are proud to call home.
               </p>
             </div>
           </div>
