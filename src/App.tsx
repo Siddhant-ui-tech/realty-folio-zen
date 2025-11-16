@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import Properties from "./pages/Properties";
 import PropertyDetail from "./pages/PropertyDetail";
 import Locations from "./pages/Locations";
+import OngoingProjects from "./pages/OngoingProjects";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/properties" element={<Properties />} />
           <Route path="/property/:id" element={<PropertyDetail />} />
           <Route path="/locations" element={<Locations />} />
+          <Route path="/ongoing-projects" element={<OngoingProjects />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

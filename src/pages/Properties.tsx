@@ -1,9 +1,9 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PropertyCard from "@/components/PropertyCard";
-import { Search, SlidersHorizontal } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { Search } from "lucide-react";
 import villaImage from "@/assets/property-villa.jpg";
 import apartmentImage from "@/assets/property-apartment.jpg";
 import penthouseImage from "@/assets/property-penthouse.jpg";
@@ -11,76 +11,52 @@ import penthouseImage from "@/assets/property-penthouse.jpg";
 const Properties = () => {
   const properties = [
     {
-      id: "1",
+      id: "bhagyalaxmi-residency",
       image: villaImage,
-      title: "Luxury Villa with Pool",
-      location: "Whitefield, Bangalore",
-      price: "₹4.5 Cr",
-      size: "4500 sq.ft",
-      bedrooms: 4,
-      bathrooms: 5,
-      type: "Villa",
-      badge: "RERA Verified",
+      title: "Bhagyalaxmi Residency",
+      location: "Bhestan, Surat",
+      price: "",
+      size: "Ready to Move",
+      bedrooms: 2,
+      bathrooms: 2,
+      type: "Residential",
+      badge: "Ready to Move",
     },
     {
-      id: "2",
+      id: "shashikunj",
       image: apartmentImage,
-      title: "Premium Sky Residences",
-      location: "Bandra West, Mumbai",
-      price: "₹3.2 Cr",
-      size: "2800 sq.ft",
-      bedrooms: 3,
-      bathrooms: 4,
-      type: "Apartment",
-      badge: "New Launch",
+      title: "Shashikunj",
+      location: "Udhna Zone, Surat",
+      price: "",
+      size: "459-1949 sq.ft",
+      bedrooms: 0,
+      bathrooms: 0,
+      type: "Plots",
+      badge: "RERA Approved",
     },
     {
-      id: "3",
+      id: "vaibhavlaxmi-shopping",
       image: penthouseImage,
-      title: "Penthouse with Terrace",
-      location: "Koregaon Park, Pune",
-      price: "₹6.8 Cr",
-      size: "5200 sq.ft",
-      bedrooms: 5,
-      bathrooms: 6,
-      type: "Penthouse",
-      badge: "Luxury",
+      title: "Vaibhavlaxmi Shopping Mall",
+      location: "Bhestan, Surat",
+      price: "",
+      size: "Commercial Hub",
+      bedrooms: 0,
+      bathrooms: 0,
+      type: "Commercial",
+      badge: "Premium",
     },
     {
-      id: "4",
+      id: "vijya-laxmi-residency",
       image: villaImage,
-      title: "Modern Garden Villa",
-      location: "Jubilee Hills, Hyderabad",
-      price: "₹5.2 Cr",
-      size: "5000 sq.ft",
-      bedrooms: 5,
-      bathrooms: 5,
-      type: "Villa",
-      badge: "RERA Verified",
-    },
-    {
-      id: "5",
-      image: apartmentImage,
-      title: "Sea View Apartments",
-      location: "Marine Drive, Mumbai",
-      price: "₹8.5 Cr",
-      size: "3500 sq.ft",
-      bedrooms: 4,
-      bathrooms: 4,
-      type: "Apartment",
+      title: "Vijya Laxmi Residency",
+      location: "Bhestan, Surat",
+      price: "",
+      size: "2 BHK",
+      bedrooms: 2,
+      bathrooms: 2,
+      type: "Residential",
       badge: "Luxury",
-    },
-    {
-      id: "6",
-      image: penthouseImage,
-      title: "Sky High Penthouse",
-      location: "Golf Course Road, Gurgaon",
-      price: "₹12 Cr",
-      size: "6000 sq.ft",
-      bedrooms: 5,
-      bathrooms: 6,
-      type: "Penthouse",
-      badge: "New Launch",
     },
   ];
 
@@ -91,28 +67,24 @@ const Properties = () => {
       {/* Hero Section */}
       <section className="pt-32 pb-16 bg-secondary/30">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center mb-12 animate-fade-in">
+          <div className="max-w-4xl mx-auto text-center mb-12">
             <h1 className="font-playfair text-5xl md:text-6xl font-bold mb-4 text-foreground">
-              Discover <span className="text-primary">Premium Properties</span>
+              Our <span className="text-primary">Properties</span>
             </h1>
             <p className="text-xl text-muted-foreground">
-              Explore our curated collection of luxury homes across India
+              Explore our collection of premium properties across Surat
             </p>
           </div>
 
-          {/* Search & Filter */}
-          <div className="bg-card rounded-2xl p-6 border border-border shadow-card max-w-5xl mx-auto animate-slide-up">
+          {/* Search and Filters */}
+          <div className="max-w-4xl mx-auto bg-card rounded-2xl p-6 border border-border shadow-card">
             <div className="flex flex-col md:flex-row gap-4">
               <div className="flex-1">
                 <Input
                   placeholder="Search by location, property name..."
-                  className="h-12 bg-secondary border-border"
+                  className="h-12"
                 />
               </div>
-              <Button variant="outline" className="h-12 px-6">
-                <SlidersHorizontal className="w-5 h-5 mr-2" />
-                Filters
-              </Button>
               <Button variant="premium" className="h-12 px-8">
                 <Search className="w-5 h-5 mr-2" />
                 Search
@@ -125,17 +97,10 @@ const Properties = () => {
       {/* Properties Grid */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animate-fade-in">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {properties.map((property) => (
               <PropertyCard key={property.id} {...property} />
             ))}
-          </div>
-
-          {/* Load More */}
-          <div className="text-center mt-12">
-            <Button variant="outline" size="lg">
-              Load More Properties
-            </Button>
           </div>
         </div>
       </section>
