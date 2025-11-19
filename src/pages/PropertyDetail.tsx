@@ -3,9 +3,12 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { MapPin, Maximize, Bed, Bath, Calendar, Award, Phone, Mail, Download, ChevronLeft } from "lucide-react";
-import villaImage from "@/assets/property-villa.jpg";
-import apartmentImage from "@/assets/property-apartment.jpg";
-import penthouseImage from "@/assets/property-penthouse.jpg";
+import bhagyalaxmiImage from "@/assets/bhagyalaxmi.jpg";
+import shashikunjImage from "@/assets/shashikunj.jpg";
+import vaibhavlaxmiImage from "@/assets/vaibhavlaxmi.jpg";
+import vijaylaxmiImage from "@/assets/vijaylaxmi.jpg";
+import bmAvenueImage from "@/assets/bm-avenue.jpg";
+import shashidhwarImage from "@/assets/shashidhwar.jpg";
 
 const PropertyDetail = () => {
   const { id } = useParams();
@@ -13,7 +16,7 @@ const PropertyDetail = () => {
   // Property data based on ID
   const propertyData: Record<string, any> = {
     "bhagyalaxmi-residency": {
-      images: [villaImage, apartmentImage, penthouseImage],
+      images: [bhagyalaxmiImage, bhagyalaxmiImage, bhagyalaxmiImage],
       title: "Bhagyalaxmi Residency",
       location: "Bhestan, Surat",
       price: "",
@@ -37,7 +40,7 @@ const PropertyDetail = () => {
       ],
     },
     "shashikunj": {
-      images: [apartmentImage, villaImage, penthouseImage],
+      images: [shashikunjImage, shashikunjImage, shashikunjImage],
       title: "Shashikunj",
       location: "Udhna Zone, Surat",
       price: "",
@@ -61,7 +64,7 @@ const PropertyDetail = () => {
       ],
     },
     "vaibhavlaxmi-shopping": {
-      images: [penthouseImage, apartmentImage, villaImage],
+      images: [vaibhavlaxmiImage, vaibhavlaxmiImage, vaibhavlaxmiImage],
       title: "Vaibhavlaxmi Shopping Mall",
       location: "Bhestan, Surat",
       price: "",
@@ -85,7 +88,7 @@ const PropertyDetail = () => {
       ],
     },
     "vijya-laxmi-residency": {
-      images: [villaImage, penthouseImage, apartmentImage],
+      images: [vijaylaxmiImage, vijaylaxmiImage, vijaylaxmiImage],
       title: "Vijya Laxmi Residency",
       location: "Bhestan, Surat",
       price: "",
@@ -109,7 +112,7 @@ const PropertyDetail = () => {
       ],
     },
     "bm-avenue": {
-      images: [apartmentImage, villaImage, penthouseImage],
+      images: [bmAvenueImage, bmAvenueImage, bmAvenueImage],
       title: "BM Avenue",
       location: "Bhestan, Surat",
       price: "",
@@ -133,7 +136,7 @@ const PropertyDetail = () => {
       ],
     },
     "shashidhwar": {
-      images: [villaImage, apartmentImage, penthouseImage],
+      images: [shashidhwarImage, shashidhwarImage, shashidhwarImage],
       title: "Shashidhwar",
       location: "Bhestan, Surat",
       price: "",
