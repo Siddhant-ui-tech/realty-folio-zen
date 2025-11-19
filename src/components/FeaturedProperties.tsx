@@ -1,14 +1,14 @@
 import PropertyCard from "./PropertyCard";
 import { Link } from "react-router-dom";
-import villaImage from "@/assets/property-villa.jpg";
-import apartmentImage from "@/assets/property-apartment.jpg";
-import penthouseImage from "@/assets/property-penthouse.jpg";
+import bhagyalaxmiImage from "@/assets/bhagyalaxmi.jpg";
+import shashikunjImage from "@/assets/shashikunj.jpg";
+import vaibhavlaxmiImage from "@/assets/vaibhavlaxmi.jpg";
 
 const FeaturedProperties = () => {
   const properties = [
     {
       id: "bhagyalaxmi-residency",
-      image: villaImage,
+      image: bhagyalaxmiImage,
       title: "Bhagyalaxmi Residency",
       location: "Bhestan, Surat",
       size: "Ready to Move",
@@ -20,7 +20,7 @@ const FeaturedProperties = () => {
     },
     {
       id: "shashikunj",
-      image: apartmentImage,
+      image: shashikunjImage,
       title: "Shashikunj",
       location: "Udhna Zone, Surat",
       size: "459-1949 sq.ft",
@@ -32,7 +32,7 @@ const FeaturedProperties = () => {
     },
     {
       id: "vaibhavlaxmi-shopping",
-      image: penthouseImage,
+      image: vaibhavlaxmiImage,
       title: "Vaibhavlaxmi Shopping Mall",
       location: "Bhestan, Surat",
       size: "Commercial Hub",

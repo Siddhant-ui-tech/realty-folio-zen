@@ -36,57 +36,7 @@ const Contact = () => {
       {/* Contact Form & Info */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-            {/* Contact Form */}
-            <div className="bg-card rounded-2xl p-8 border border-border shadow-card animate-slide-up">
-              <h2 className="font-playfair text-3xl font-bold mb-6 text-foreground">
-                Send us a Message
-              </h2>
-              <form className="space-y-4">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="text-sm text-muted-foreground mb-2 block">Full Name</label>
-                    <Input
-                      placeholder="John Doe"
-                      className="bg-secondary border-border"
-                    />
-                  </div>
-                  <div>
-                    <label className="text-sm text-muted-foreground mb-2 block">Phone Number</label>
-                    <Input
-                      placeholder="+91 98765 43210"
-                      className="bg-secondary border-border"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <label className="text-sm text-muted-foreground mb-2 block">Email Address</label>
-                  <Input
-                    type="email"
-                    placeholder="john@example.com"
-                    className="bg-secondary border-border"
-                  />
-                </div>
-                <div>
-                  <label className="text-sm text-muted-foreground mb-2 block">Property Interest</label>
-                  <Input
-                    placeholder="Villa, Apartment, Penthouse..."
-                    className="bg-secondary border-border"
-                  />
-                </div>
-                <div>
-                  <label className="text-sm text-muted-foreground mb-2 block">Your Message</label>
-                  <Textarea
-                    placeholder="Tell us about your requirements..."
-                    className="bg-secondary border-border min-h-32"
-                  />
-                </div>
-                <Button variant="premium" className="w-full h-12 font-semibold">
-                  Submit Inquiry
-                </Button>
-              </form>
-            </div>
-
+          <div className="max-w-6xl mx-auto">
             {/* Contact Information */}
             <div className="space-y-6">
               {/* Quick Contact */}
@@ -121,19 +71,6 @@ const Contact = () => {
 
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <MessageCircle className="w-6 h-6 text-primary" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-1">WhatsApp</h4>
-                      <p className="text-muted-foreground">Chat with us instantly</p>
-                      <Button variant="outline" size="sm" className="mt-2">
-                        Start Chat
-                      </Button>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
                       <Clock className="w-6 h-6 text-primary" />
                     </div>
                     <div>
@@ -153,9 +90,9 @@ const Contact = () => {
                 <p className="text-primary-foreground/90 mb-6">
                   Book a personalized tour of properties that match your preferences
                 </p>
-                <Button variant="outline" className="bg-primary-foreground/10 text-primary-foreground border-primary-foreground/20 hover:bg-primary-foreground/20">
-                  Book Appointment
-                </Button>
+                <p className="text-primary-foreground font-semibold">
+                  Please contact on the above number.
+                </p>
               </div>
             </div>
           </div>

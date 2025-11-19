@@ -16,42 +16,7 @@ const ContactSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto animate-slide-up">
-          {/* Contact Form */}
-          <div className="bg-card rounded-2xl p-8 border border-border shadow-card">
-            <h3 className="font-playfair text-2xl font-bold mb-6 text-foreground">
-              Send us a Message
-            </h3>
-            <form className="space-y-4">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <Input
-                  placeholder="Your Name"
-                  className="bg-secondary border-border"
-                />
-                <Input
-                  placeholder="Phone Number"
-                  className="bg-secondary border-border"
-                />
-              </div>
-              <Input
-                type="email"
-                placeholder="Email Address"
-                className="bg-secondary border-border"
-              />
-              <Input
-                placeholder="Property Interest"
-                className="bg-secondary border-border"
-              />
-              <Textarea
-                placeholder="Your Message"
-                className="bg-secondary border-border min-h-32"
-              />
-              <Button variant="premium" className="w-full h-12 font-semibold">
-                Submit Inquiry
-              </Button>
-            </form>
-          </div>
-
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto animate-slide-up">
           {/* Contact Information */}
           <div className="space-y-8">
             <div className="bg-card rounded-2xl p-8 border border-border shadow-card">
@@ -63,8 +28,10 @@ const ContactSection = () => {
                   <h4 className="font-playfair text-xl font-bold mb-2 text-foreground">
                     Call Us
                   </h4>
-                  <p className="text-muted-foreground">+91 98765 43210</p>
-                  <p className="text-muted-foreground">Mon-Sat, 9AM-8PM</p>
+                  <p className="text-muted-foreground">+91 9724700082</p>
+                  <p className="text-muted-foreground">+91 9724700084</p>
+                  <p className="text-muted-foreground">+91 8141544411</p>
+                  <p className="text-sm text-muted-foreground">Mon-Sat, 9AM-8PM</p>
                 </div>
               </div>
             </div>
@@ -91,13 +58,12 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="font-playfair text-xl font-bold mb-2 text-foreground">
-                    Visit Office
+                    Visit Us
                   </h4>
                   <p className="text-muted-foreground">
-                    123 Business Plaza, BKC,
-                    <br />
-                    Mumbai - 400051
+                    BM AVENUE, F.P. NO.: 37, T.P.S. NO.: 54
                   </p>
+                  <p className="text-muted-foreground">Bhestan Canal Road, Bhestan, Surat</p>
                 </div>
               </div>
             </div>

@@ -1,14 +1,14 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PropertyCard from "@/components/PropertyCard";
-import apartmentImage from "@/assets/property-apartment.jpg";
-import villaImage from "@/assets/property-villa.jpg";
+import bmAvenueImage from "@/assets/bm-avenue.jpg";
+import shashidhwarImage from "@/assets/shashidhwar.jpg";
 
 const OngoingProjects = () => {
   const projects = [
     {
       id: "bm-avenue",
-      image: apartmentImage,
+      image: bmAvenueImage,
       title: "BM Avenue",
       location: "Bhestan, Surat",
       price: "",
@@ -20,7 +20,7 @@ const OngoingProjects = () => {
     },
     {
       id: "shashidhwar",
-      image: villaImage,
+      image: shashidhwarImage,
       title: "Shashidhwar",
       location: "Bhestan, Surat",
       price: "",

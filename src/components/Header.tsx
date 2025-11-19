@@ -39,6 +39,12 @@ const Header = () => {
               Ongoing Projects
             </Link>
             <Link 
+              to="/why-shashi-realty" 
+              className={`transition-colors ${isActive('/why-shashi-realty') ? 'text-primary' : 'text-foreground hover:text-primary'}`}
+            >
+              Why Shashi Realty
+            </Link>
+            <Link 
               to="/about" 
               className={`transition-colors ${isActive('/about') ? 'text-primary' : 'text-foreground hover:text-primary'}`}
             >
@@ -85,6 +91,13 @@ const Header = () => {
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Ongoing Projects
+              </Link>
+              <Link 
+                to="/why-shashi-realty" 
+                className={`py-2 transition-colors ${isActive('/why-shashi-realty') ? 'text-primary' : 'text-foreground hover:text-primary'}`}
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Why Shashi Realty
               </Link>
               <Link 
                 to="/about" 
