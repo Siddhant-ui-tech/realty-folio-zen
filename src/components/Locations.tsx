@@ -2,11 +2,9 @@ import { TrendingUp } from "lucide-react";
 
 const Locations = () => {
   const locations = [
-    { name: "Mumbai", properties: "180+", avgPrice: "₹18,500/sq.ft", growth: "+12%" },
-    { name: "Bangalore", properties: "220+", avgPrice: "₹8,200/sq.ft", growth: "+15%" },
-    { name: "Pune", properties: "150+", avgPrice: "₹7,800/sq.ft", growth: "+10%" },
-    { name: "Surat", properties: "130+", avgPrice: "₹9,500/sq.ft", growth: "+8%" },
-    { name: "Hyderabad", properties: "100+", avgPrice: "₹6,900/sq.ft", growth: "+14%" },
+    { name: "Bhestan", properties: "860+ Flats", growth: "+15%" },
+    { name: "Udhna", properties: "220+ Row Houses", growth: "+12%" },
+    { name: "Parvat Patiya", properties: "325+ Shops", growth: "+10%" },
   ];
 
   return (
@@ -17,7 +15,7 @@ const Locations = () => {
             Explore Top <span className="text-primary">Locations</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Premium properties in India's most sought-after cities
+            Premium properties in Surat's most sought-after areas
           </p>
         </div>
 

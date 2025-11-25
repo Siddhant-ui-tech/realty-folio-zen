@@ -117,8 +117,8 @@ const PropertyDetail = () => {
       location: "Bhestan, Surat",
       price: "",
       size: "336 Flats, 135 Shops",
-      bedrooms: 0,
-      bathrooms: 0,
+      bedrooms: 2,
+      bathrooms: 2,
       type: "Mixed-Use Development",
       reraId: "Under Construction",
       possession: "Ongoing",
@@ -141,8 +141,8 @@ const PropertyDetail = () => {
       location: "Bhestan, Surat",
       price: "",
       size: "196 Units",
-      bedrooms: 0,
-      bathrooms: 0,
+      bedrooms: 2,
+      bathrooms: 2,
       type: "Residential Project",
       reraId: "PR/GJ/SURAT/CHORASI/SUDA/MAA07433/080920",
       possession: "Expected Mar 2026",
@@ -309,18 +309,31 @@ const PropertyDetail = () => {
                     Contact Us
                   </h3>
                   <div className="space-y-3">
-                    <Button variant="premium" className="w-full">
-                      <Phone className="w-4 h-4 mr-2" />
-                      Call Now
+                    <Button variant="premium" className="w-full" asChild>
+                      <a href="tel:+919374504004">
+                        <Phone className="w-4 h-4 mr-2" />
+                        Call Now
+                      </a>
                     </Button>
-                    <Button variant="outline" className="w-full">
-                      <Mail className="w-4 h-4 mr-2" />
-                      Email Us
+                    <Button variant="outline" className="w-full" asChild>
+                      <a href="mailto:Shashirealty08@gmail.com">
+                        <Mail className="w-4 h-4 mr-2" />
+                        Email Us
+                      </a>
                     </Button>
-                    <Button variant="secondary" className="w-full">
-                      <Download className="w-4 h-4 mr-2" />
-                      Download Brochure
-                    </Button>
+                    {(id === "shashidhwar" || id === "bm-avenue") && (
+                      <Button variant="secondary" className="w-full" asChild>
+                        <a 
+                          href={id === "shashidhwar" ? "/brochures/Shashi_Dhwar_Catalog.pdf" : "/brochures/BM_AVENUE_BROCHURE.pdf"}
+                          download
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Download className="w-4 h-4 mr-2" />
+                          Download Brochure
+                        </a>
+                      </Button>
+                    )}
                   </div>
                 </div>
 

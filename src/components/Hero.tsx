@@ -21,21 +21,21 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto text-center animate-fade-in">
           <h1 className="font-playfair text-5xl md:text-7xl font-bold mb-6 text-foreground">
             Find Your Dream Home
-            <span className="block text-primary mt-2">in India's Finest Locations</span>
+            <span className="block text-primary mt-2">in Surat's Finest Locations</span>
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-12">
-            Discover luxury living with RERA verified properties from trusted builders
+            Discover luxury living with RERA verified properties from Shashi Reality
           </p>
 
           {/* Stats */}
           <div className="grid grid-cols-3 gap-8 mt-16 animate-scale-in">
             <div>
-              <div className="text-4xl md:text-5xl font-bold text-accent mb-2">500+</div>
+              <div className="text-4xl md:text-5xl font-bold text-accent mb-2">100+</div>
               <div className="text-muted-foreground">Premium Properties</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold text-accent mb-2">50+</div>
-              <div className="text-muted-foreground">Trusted Builders</div>
+              <div className="text-4xl md:text-5xl font-bold text-accent mb-2">100+</div>
+              <div className="text-muted-foreground">Happy Customers</div>
             </div>
             <div>
               <div className="text-4xl md:text-5xl font-bold text-accent mb-2">100%</div>
