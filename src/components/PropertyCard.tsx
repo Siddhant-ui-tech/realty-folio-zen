@@ -74,12 +74,19 @@ const PropertyCard = ({
           </div>
         </div>
 
-        <div className="flex items-center justify-end">
+        <div className="flex items-center justify-between gap-4">
           <Link to={`/property/${id}`}>
             <Button variant="default">
               View Details
             </Button>
           </Link>
+          {badge === "Ongoing" || badge === "RERA Approved" ? (
+            <Link to="/contact">
+              <Button variant="premium">
+                Book Now
+              </Button>
+            </Link>
+          ) : null}
         </div>
       </div>
     </div>

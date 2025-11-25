@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, MapPin, Clock, MessageCircle } from "lucide-react";
+import { Mail, Phone, MapPin, MessageCircle } from "lucide-react";
 
 const Contact = () => {
   const offices = [
@@ -51,10 +51,10 @@ const Contact = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-foreground mb-1">Call Us</h4>
+                      <p className="text-muted-foreground">+91 93745 04004</p>
                       <p className="text-muted-foreground">+91 9724700082</p>
                       <p className="text-muted-foreground">+91 9724700084</p>
                       <p className="text-muted-foreground">+91 8141544411</p>
-                      <p className="text-sm text-muted-foreground">Mon-Sat, 9AM-8PM</p>
                     </div>
                   </div>
 
@@ -66,17 +66,6 @@ const Contact = () => {
                       <h4 className="font-semibold text-foreground mb-1">Email Us</h4>
                       <p className="text-muted-foreground">info@shashirealty.in</p>
                       <p className="text-muted-foreground">support@shashirealty.in</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <Clock className="w-6 h-6 text-primary" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-1">Business Hours</h4>
-                      <p className="text-muted-foreground">Monday - Saturday</p>
-                      <p className="text-muted-foreground">9:00 AM - 8:00 PM</p>
                     </div>
                   </div>
                 </div>
