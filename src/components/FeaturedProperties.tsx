@@ -13,7 +13,7 @@ const FeaturedProperties = () => {
       size: "336 Flats, 135 Shops",
       bedrooms: 2,
       bathrooms: 2,
-      type: "Mixed-Use",
+      type: "Commercial & Residential",
       badge: "Ongoing",
       description: "BM Avenue is a premier mixed-use development in Bhestan featuring 336 modern flats and 135 commercial shops.",
     },
