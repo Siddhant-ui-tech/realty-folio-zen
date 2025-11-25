@@ -15,7 +15,7 @@ const OngoingProjects = () => {
       size: "336 Flats, 135 Shops",
       bedrooms: 2,
       bathrooms: 2,
-      type: "Mixed-Use",
+      type: "Commercial & Residential",
       badge: "Ongoing",
     },
     {
