@@ -5,6 +5,8 @@ const Locations = () => {
     { name: "Bhestan", properties: "860+ Flats", growth: "+15%" },
     { name: "Udhna", properties: "220+ Row Houses", growth: "+12%" },
     { name: "Parvat Patiya", properties: "325+ Shops", growth: "+10%" },
+    { name: "Adajan", properties: "150+ Apartments", growth: "+8%" },
+    { name: "Vesu", properties: "180+ Villas", growth: "+14%" },
   ];
 
   return (
@@ -19,7 +21,7 @@ const Locations = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-slide-up">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 animate-slide-up">
           {locations.map((location, index) => (
             <div
               key={index}

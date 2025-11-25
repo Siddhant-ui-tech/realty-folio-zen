@@ -43,7 +43,7 @@ const FeaturedProperties = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animate-slide-up">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto animate-slide-up">
           {properties.map((property) => (
             <PropertyCard key={property.id} {...property} />
           ))}
