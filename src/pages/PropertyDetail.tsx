@@ -20,12 +20,12 @@ const PropertyDetail = () => {
       title: "Bhagyalaxmi Residency",
       location: "Bhestan, Surat",
       price: "",
-      size: "0.16 acres",
-      bedrooms: 2,
-      bathrooms: 2,
-      type: "Residential Low Rise",
+      size: "394 Flats, 12 Shops",
+      bedrooms: 1,
+      bathrooms: 1,
+      type: "1 BHK",
       reraId: "RERA Verified",
-      possession: "Ready to Move",
+      possession: "Completed",
       builder: "Shashi Realty",
       description: "Bhagyalaxmi Residency in Bhestan, Surat is a ready-to-move housing society designed to offer a perfect combination of comfort and style. Spread across 0.16 acres, it is one of the spacious communities in the region. With essential amenities and strong infrastructure, Bhestan is emerging as a prime choice for homebuyers. Surat's growing job market and robust development make Bhagyalaxmi Residency ideal for both residential and investment purposes.",
       amenities: [
@@ -44,7 +44,7 @@ const PropertyDetail = () => {
       title: "Shashikunj",
       location: "Udhna Zone, Surat",
       price: "",
-      size: "459-1949 sq.ft",
+      size: "",
       bedrooms: 0,
       bathrooms: 0,
       type: "Residential Plots",
@@ -73,7 +73,7 @@ const PropertyDetail = () => {
       bathrooms: 0,
       type: "Commercial",
       reraId: "Commercial Project",
-      possession: "Completed Sep 2022",
+      possession: "Completed",
       builder: "Shashi Realty",
       description: "Vaibhavlaxmi Shopping Mall is a premium commercial project in Bhestan, Surat offering commercial shops and office spaces designed for maximum visibility and high footfall. With strong infrastructure, improving connectivity, and modern amenities, it is an ideal investment opportunity. The project supports diverse commercial activities and is expected to generate long-term returns.",
       amenities: [
@@ -97,7 +97,7 @@ const PropertyDetail = () => {
       bathrooms: 2,
       type: "Luxury Apartments",
       reraId: "RERA Verified",
-      possession: "Ready",
+      possession: "Completed",
       builder: "Shashi Realty",
       description: "Vijya Laxmi Residency in Bhestan, Surat provides luxurious 2 BHK apartments designed for an elite lifestyle. With world-class amenities such as 24/7 water supply, backup electricity, covered parking, fire safety, and lifts, the project ensures modern living at its finest. The apartments are Vastu compliant and offer excellent space utilization. Located close to Surat International Airport, this project provides a premium and well-connected address.",
       amenities: [
@@ -117,9 +117,12 @@ const PropertyDetail = () => {
       location: "Bhestan, Surat",
       price: "",
       size: "336 Flats, 135 Shops",
+      flatSize: "741 sq.ft. Carpet Area",
+      shopSize: "205 – 4850 sq.ft. Carpet Area",
+      shopDescription: "Best space for Hospital, Showroom, Office, Coaching Classes, Gym, Co-working Space.",
       bedrooms: 2,
       bathrooms: 2,
-      type: "Mixed-Use Development",
+      type: "Commercial & Residential",
       reraId: "Under Construction",
       possession: "Ongoing",
       builder: "Shashi Realty",
@@ -141,9 +144,10 @@ const PropertyDetail = () => {
       location: "Bhestan, Surat",
       price: "",
       size: "196 Units",
+      flatSize: "520 sq.ft. Carpet Area",
       bedrooms: 2,
       bathrooms: 2,
-      type: "Residential Project",
+      type: "Residential",
       reraId: "PR/GJ/SURAT/CHORASI/SUDA/MAA07433/080920",
       possession: "Expected Mar 2026",
       builder: "Shashidhwar Enterprise",
@@ -232,13 +236,38 @@ const PropertyDetail = () => {
                       </div>
                     </div>
                   )}
-                  <div className="flex items-center gap-2">
-                    <Maximize className="w-5 h-5 text-primary" />
-                    <div>
-                      <div className="text-sm text-muted-foreground">Size</div>
-                      <div className="font-semibold text-foreground">{property.size}</div>
+                  {property.size && (
+                    <div className="flex items-center gap-2">
+                      <Maximize className="w-5 h-5 text-primary" />
+                      <div>
+                        <div className="text-sm text-muted-foreground">Size</div>
+                        <div className="font-semibold text-foreground">{property.size}</div>
+                      </div>
                     </div>
-                  </div>
+                  )}
+                  {property.flatSize && (
+                    <div className="flex items-center gap-2">
+                      <Maximize className="w-5 h-5 text-primary" />
+                      <div>
+                        <div className="text-sm text-muted-foreground">Flat Size</div>
+                        <div className="font-semibold text-foreground">{property.flatSize}</div>
+                      </div>
+                    </div>
+                  )}
+                  {property.shopSize && (
+                    <div className="flex flex-col gap-1 w-full">
+                      <div className="flex items-center gap-2">
+                        <Maximize className="w-5 h-5 text-primary" />
+                        <div>
+                          <div className="text-sm text-muted-foreground">Shop Size</div>
+                          <div className="font-semibold text-foreground">{property.shopSize}</div>
+                        </div>
+                      </div>
+                      {property.shopDescription && (
+                        <p className="text-sm text-muted-foreground ml-7">{property.shopDescription}</p>
+                      )}
+                    </div>
+                  )}
                   <div className="flex items-center gap-2">
                     <Calendar className="w-5 h-5 text-primary" />
                     <div>
@@ -316,7 +345,7 @@ const PropertyDetail = () => {
                       </a>
                     </Button>
                     <Button variant="outline" className="w-full" asChild>
-                      <a href="mailto:Shashirealty08@gmail.com">
+                      <a href="mailto:bmavenue0@gmail.com">
                         <Mail className="w-4 h-4 mr-2" />
                         Email Us
                       </a>
