@@ -60,14 +60,18 @@ const PropertyCard = ({
         </div>
 
         <div className="flex items-center gap-4 mb-4 pb-4 border-b border-border">
-          <div className="flex items-center gap-1">
-            <Bed className="w-4 h-4 text-primary" />
-            <span className="text-sm text-foreground">{bedrooms} Beds</span>
-          </div>
-          <div className="flex items-center gap-1">
-            <Bath className="w-4 h-4 text-primary" />
-            <span className="text-sm text-foreground">{bathrooms} Baths</span>
-          </div>
+          {bedrooms > 0 && (
+            <div className="flex items-center gap-1">
+              <Bed className="w-4 h-4 text-primary" />
+              <span className="text-sm text-foreground">{bedrooms} Beds</span>
+            </div>
+          )}
+          {bathrooms > 0 && (
+            <div className="flex items-center gap-1">
+              <Bath className="w-4 h-4 text-primary" />
+              <span className="text-sm text-foreground">{bathrooms} Baths</span>
+            </div>
+          )}
           <div className="flex items-center gap-1">
             <Maximize className="w-4 h-4 text-primary" />
             <span className="text-sm text-foreground">{size}</span>
