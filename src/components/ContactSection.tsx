@@ -17,24 +17,6 @@ const ContactSection = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto animate-slide-up">
-          {/* Phone */}
-          <div className="bg-card rounded-2xl p-6 border border-border hover:border-primary transition-all shadow-card">
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                <Phone className="w-6 h-6 text-primary" />
-              </div>
-              <div>
-                <h4 className="font-playfair text-xl font-bold mb-2 text-foreground">
-                  Call Us
-                </h4>
-                <p className="text-muted-foreground">+91 93745 04004</p>
-                <p className="text-muted-foreground">+91 9724700082</p>
-                <p className="text-muted-foreground">+91 9724700084</p>
-                <p className="text-muted-foreground">+91 8141544411</p>
-              </div>
-            </div>
-          </div>
-
           {/* Email */}
           <div className="bg-card rounded-2xl p-6 border border-border hover:border-primary transition-all shadow-card">
             <div className="flex items-start gap-4">
@@ -45,8 +27,22 @@ const ContactSection = () => {
                 <h4 className="font-playfair text-xl font-bold mb-2 text-foreground">
                   Email Us
                 </h4>
-                <p className="text-muted-foreground">info@shashirealty.in</p>
-                <p className="text-muted-foreground">support@shashirealty.in</p>
+                <p className="text-muted-foreground">bmavenue0@gmail.com</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Phone */}
+          <div className="bg-card rounded-2xl p-6 border border-border hover:border-primary transition-all shadow-card">
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                <Phone className="w-6 h-6 text-primary" />
+              </div>
+              <div>
+                <h4 className="font-playfair text-xl font-bold mb-2 text-foreground">
+                  Call Us
+                </h4>
+                <p className="text-muted-foreground">+919374504004</p>
               </div>
             </div>
           </div>

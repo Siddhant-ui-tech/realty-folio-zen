@@ -10,8 +10,8 @@ const Contact = () => {
     {
       city: "Surat",
       address: "BM AVENUE, F.P. NO.: 37, T.P.S. NO.: 54, Bhestan Canal Road, Bhestan, Surat",
-      phone: "+91 9724700082",
-      email: "info@shashirealty.in",
+      phone: "+919374504004",
+      email: "bmavenue0@gmail.com",
     },
   ];
 
@@ -51,10 +51,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-foreground mb-1">Call Us</h4>
-                      <p className="text-muted-foreground">+91 93745 04004</p>
-                      <p className="text-muted-foreground">+91 9724700082</p>
-                      <p className="text-muted-foreground">+91 9724700084</p>
-                      <p className="text-muted-foreground">+91 8141544411</p>
+                      <p className="text-muted-foreground">+919374504004</p>
                     </div>
                   </div>
 
@@ -64,8 +61,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-foreground mb-1">Email Us</h4>
-                      <p className="text-muted-foreground">info@shashirealty.in</p>
-                      <p className="text-muted-foreground">support@shashirealty.in</p>
+                      <p className="text-muted-foreground">bmavenue0@gmail.com</p>
                     </div>
                   </div>
                 </div>
