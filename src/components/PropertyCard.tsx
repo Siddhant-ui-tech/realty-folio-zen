@@ -72,10 +72,12 @@ const PropertyCard = ({
               <span className="text-sm text-foreground">{bathrooms} Baths</span>
             </div>
           )}
-          <div className="flex items-center gap-1">
-            <Maximize className="w-4 h-4 text-primary" />
-            <span className="text-sm text-foreground">{size}</span>
-          </div>
+          {size && (
+            <div className="flex items-center gap-1">
+              <Maximize className="w-4 h-4 text-primary" />
+              <span className="text-sm text-foreground">{size}</span>
+            </div>
+          )}
         </div>
 
         <div className="flex items-center justify-between gap-4">
