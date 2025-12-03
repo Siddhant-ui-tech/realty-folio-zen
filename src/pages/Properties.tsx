@@ -30,7 +30,7 @@ const Properties = () => {
       bedrooms: 2,
       bathrooms: 2,
       type: "Plots",
-      badge: "RERA Approved",
+      badge: "Completed",
     },
     {
       id: "vaibhavlaxmi-shopping",
