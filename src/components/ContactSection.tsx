@@ -42,7 +42,7 @@ const ContactSection = () => {
                 <h4 className="font-playfair text-xl font-bold mb-2 text-foreground">
                   Call Us
                 </h4>
-                <p className="text-muted-foreground">+919374504004</p>
+                <p className="text-muted-foreground">+91 9724700082</p>
               </div>
             </div>
           </div>
