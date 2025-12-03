@@ -26,7 +26,7 @@ const Properties = () => {
       title: "Shashikunj",
       location: "Udhna Zone, Surat",
       price: "",
-      size: "459-1949 sq.ft",
+      size: "",
       bedrooms: 2,
       bathrooms: 2,
       type: "Plots",
