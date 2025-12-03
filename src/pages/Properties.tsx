@@ -18,7 +18,7 @@ const Properties = () => {
       bedrooms: 2,
       bathrooms: 2,
       type: "Residential",
-      badge: "Ready to Move",
+      badge: "Completed",
     },
     {
       id: "shashikunj",
@@ -42,7 +42,7 @@ const Properties = () => {
       bedrooms: 0,
       bathrooms: 0,
       type: "Commercial",
-      badge: "Premium",
+      badge: "Completed",
     },
     {
       id: "vijya-laxmi-residency",
@@ -54,7 +54,7 @@ const Properties = () => {
       bedrooms: 2,
       bathrooms: 2,
       type: "Residential",
-      badge: "Luxury",
+      badge: "Completed",
     },
   ];
 
