@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import { Facebook, Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
 import shashiRealtyLogo from "@/assets/shashi-realty-logo.png";
 
@@ -16,17 +16,23 @@ const Footer = () => {
               Find your space. Feel your future. India's premier destination for luxury real estate.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+              <a 
+                href="https://www.facebook.com/ShashiRealty" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center hover:bg-primary transition-colors"
+                aria-label="Facebook"
+              >
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+              <a 
+                href="https://www.instagram.com/shashirealty?igsh=MWU2N2QwaGZmb29teA%3D%3D&utm_source=qr" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center hover:bg-primary transition-colors"
+                aria-label="Instagram"
+              >
                 <Instagram className="w-5 h-5" />
-              </a>
-              <a href="#" className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center hover:bg-primary transition-colors">
-                <Linkedin className="w-5 h-5" />
-              </a>
-              <a href="#" className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center hover:bg-primary transition-colors">
-                <Twitter className="w-5 h-5" />
               </a>
             </div>
           </div>
