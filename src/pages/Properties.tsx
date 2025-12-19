@@ -5,7 +5,7 @@ import bhagyalaxmiImage from "@/assets/bhagyalaxmi.jpg";
 import shashikunjImage from "@/assets/shashikunj.jpg";
 import vaibhavlaxmiImage from "@/assets/vaibhavlaxmi.jpg";
 import vijaylaxmiImage from "@/assets/vijaylaxmi.jpg";
-
+import shashiroopImage from "@/assets/shashiroop.jpg";
 const Properties = () => {
   const properties = [
     {
@@ -58,7 +58,7 @@ const Properties = () => {
     },
     {
       id: "shashiroop-homes",
-      image: bhagyalaxmiImage,
+      image: shashiroopImage,
       title: "Shashiroop Homes",
       location: "Bhestan, Surat",
       price: "",

@@ -9,6 +9,7 @@ import vaibhavlaxmiImage from "@/assets/vaibhavlaxmi.jpg";
 import vijaylaxmiImage from "@/assets/vijaylaxmi.jpg";
 import bmAvenueImage from "@/assets/bm-avenue.jpg";
 import shashidhwarImage from "@/assets/shashidhwar.jpg";
+import shashiroopImage from "@/assets/shashiroop.jpg";
 
 const PropertyDetail = () => {
   const { id } = useParams();
@@ -144,7 +145,6 @@ const PropertyDetail = () => {
       location: "Bhestan, Surat",
       price: "",
       size: "196 Units",
-      flatSize: "520 sq.ft. Carpet Area",
       bedrooms: 2,
       bathrooms: 2,
       type: "Residential",
@@ -161,6 +161,30 @@ const PropertyDetail = () => {
         "Car Parking",
         "Near Railway Station",
         "RERA Approved",
+      ],
+    },
+    "shashiroop-homes": {
+      images: [shashiroopImage, shashiroopImage, shashiroopImage],
+      title: "Shashiroop Homes",
+      location: "Bhestan, Surat, Gujarat",
+      price: "",
+      size: "1 BHK",
+      bedrooms: 1,
+      bathrooms: 2,
+      type: "Flat / Apartment",
+      reraId: "For Sale",
+      possession: "Ready",
+      builder: "Shashi Realty",
+      description: "Shashiroop Homes is a thoughtfully designed residential project located in Bhestan, Surat, offering comfortable and affordable urban living. This 1 BHK flat/apartment is ideal for first-time home buyers, small families, and investors looking for value-driven property in a fast-developing area of Surat. The home features well-planned interiors, 2 modern bathrooms, and a functional layout that maximizes space and natural light. The project is equipped with essential lifestyle amenities ensuring convenience, safety, and a peaceful living environment. Strategically situated in Bhestan, the property enjoys excellent connectivity to key parts of Surat, daily essentials, public transport, and social infrastructure, making it a practical choice for everyday living.",
+      amenities: [
+        "Intercom Facility",
+        "Lift(s)",
+        "Maintenance Staff",
+        "Park",
+        "Security / Fire Alarm",
+        "Visitor Parking",
+        "Water Storage",
+        "Excellent Connectivity",
       ],
     },
   };
