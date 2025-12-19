@@ -24,7 +24,7 @@ const OngoingProjects = () => {
       title: "Shashidhwar",
       location: "Bhestan, Surat",
       price: "",
-      size: "196 Units",
+      size: "",
       bedrooms: 2,
       bathrooms: 2,
       type: "Residential",
